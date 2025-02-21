@@ -1,0 +1,4 @@
+# Macht eine clear Methode auf dem Stack sinn?
+eine clear methode könnte den index des stacks direkt auf `STACK_EMPTY_INDEX` setzen, man könnte aber auch pop aufrufen bis der stack leer ist.
+
+clear wäre dann eine effizientere option für das leeren des stacks.
