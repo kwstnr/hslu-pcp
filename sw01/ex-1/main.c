@@ -15,9 +15,18 @@ void printNumbersFor(int number) {
   }
 }
 
+void printNumbersRecursiveFunction(int number) {
+  if (number > 0) {
+    printNumbersRecursiveFunction(number - 1);
+  }
+  printf("%i ", number);
+}
+
 int main(int argc, char** argv) {
   printNumbersGoto(7);
   printf("= printNumbersGoto(7)\n");
   printNumbersFor(7);
   printf("= printNumbersFor(7)\n");
+  printNumbersRecursiveFunction(7);
+  printf("= printNumbersRecursiveFunction(7)\n");
 } 
