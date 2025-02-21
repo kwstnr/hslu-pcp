@@ -22,6 +22,13 @@ void printNumbersRecursiveFunction(int number) {
   printf("%i ", number);
 }
 
+void printReverseNumbersRecursiveFunction(int n) {
+  printf("%i ", n);
+  if (n > 0) {
+    printReverseNumbersRecursiveFunction(n - 1);
+  }
+}
+
 int main(int argc, char** argv) {
   printNumbersGoto(7);
   printf("= printNumbersGoto(7)\n");
@@ -29,4 +36,6 @@ int main(int argc, char** argv) {
   printf("= printNumbersFor(7)\n");
   printNumbersRecursiveFunction(7);
   printf("= printNumbersRecursiveFunction(7)\n");
+  printReverseNumbersRecursiveFunction(7);
+  printf("= printReverseNumbersRecursiveFunction(7)\n");
 } 
