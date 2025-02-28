@@ -53,3 +53,4 @@ offspring(X, Y) :- parent(Y, Z), offspring(X, Z).
 
 % operatoren
 ?- op(1150, xfx, mother).
+?- op(1150, xfx, offspring).
