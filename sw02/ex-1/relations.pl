@@ -32,3 +32,7 @@ mother(X, Y) :-
 father(X, Y) :-
   male(X),
   parent(X, Y).
+
+sibling(X, Y) :-
+  parent(Z, X),
+  parent(Z, Y).
