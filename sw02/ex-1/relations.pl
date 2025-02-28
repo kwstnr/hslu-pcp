@@ -36,3 +36,9 @@ father(X, Y) :-
 sibling(X, Y) :-
   parent(Z, X),
   parent(Z, Y).
+
+grandmother(X, Y) :-
+  mother(X, Z),
+  parent(Z, Y).
+
+% alle grossmütter von jim => grandmother(X, jim).
