@@ -43,10 +43,10 @@ grandmother(X, Y) :-
 
 % alle grossmütter von jim => grandmother(X, jim).
 
-% nicht rekursiv und ohne transitiver hülle:
-%offspring(X, Y) :-
-%  parent(Y, Z),
-%  parent(Z, X).
-
 offspring(X, Y) :- parent(Y, X).
-offspring(X, Y) :- parent(Y, Z), offspring(X, Z).
+offspring(X, Y) :-
+  parent(Y, Z),
+  parent(Z, X).
+
+offspring2(X, Y) :- parent(Y, X).
+offspring2(X, Y) :- parent(Y, Z), offspring2(X, Z).

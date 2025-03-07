@@ -7,7 +7,7 @@ identisch mit X is (16 / 4) / 2
 # B
 Y = 3, X = Y - 1.
 gibt Y = 3, X = 3-1.
-Die Variabel X = Y-1 wird nicht ausgewertet!
+Die Variabel X = Y-1 wird nicht ausgewertet sondern instanziert!
 
 # C
 Y = 3, X is Y - 1
