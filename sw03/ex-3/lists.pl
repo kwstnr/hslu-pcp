@@ -21,3 +21,6 @@ del([], _, []). %f1
 
 del([X | T], X, L) :- !, del(T, X, L). % r1
 del([H | T], X, [H | L]) :- del(T, X, L). % r2
+
+% 3c) ich krieg es leider nicht ohne ungleichheitscheck hin, musste dafür googeln, weil del(L, X, _) in beiden Fällen true ist.
+mem_d(X, L) :- del(L, X, L1), L \= L1.
