@@ -15,9 +15,9 @@ pom.xml.asc
 .idea
 .lein-*
 .nrepl-*
-.DS_Store
+*/.DS_Store
 
 .calva/output-window
 .calva/repl.calva-repl
-.lsp/.cache
-.clj-kondo/.cache
+../.lsp/.cache
+../.clj-kondo/.cache
