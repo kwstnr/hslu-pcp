@@ -96,7 +96,14 @@ relationship(JSONReply, Solution) :-
   atom_string(FirstPerson, JSONReply.firstPerson),
   atom_string(SecondPerson, JSONReply.secondPerson),
   atom_string(Relationship, JSONReply.relationship),
-  (call(Relationship, FirstPerson, SecondPerson) -> Solution = "true" ; Solution = "false").
+  relationship_true_false(Relationship, FirstPerson, SecondPerson, Solution).
+
+relationship_true_false(Relationship, FirstPerson, SecondPerson, Solution) :-
+  call(Relationship, FirstPerson, SecondPerson),
+  Solution = "true",
+  !.
+relationship_true_false(_, _, _, "false").
+
 
 sudoku(JSONReply, Solution) :-
   Problem = JSONReply.sudoku,

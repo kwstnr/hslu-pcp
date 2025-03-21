@@ -5,7 +5,7 @@ set_difference([HL1 | TL1], L2, [HL1 | R]) :-
   !,
   set_difference(TL1, L2, R).
 
-set_difference([HL1 | TL1], L2, R) :-
+set_difference([_ | TL1], L2, R) :-
   set_difference(TL1, L2, R).
 
 % Basisfall: Ist Set1 leer, ist auch die Differenz leer.
