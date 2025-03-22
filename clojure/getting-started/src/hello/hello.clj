@@ -27,3 +27,19 @@
 (def x '(+ 2 3 4 5))
 
 (eval x)
+
+
+; profit calculation
+(def fixed 250)
+(defn amount-of-visitors [ticket-price] (+ 120 (* 30 (- 8.0 ticket-price))))
+(defn variable-costs [amount-of-visitors] (* 0.75 amount-of-visitors))
+(defn total-costs [ticket-price] (+ fixed (variable-costs (amount-of-visitors ticket-price))))
+(defn einnahmen [ticket-price] (* ticket-price (amount-of-visitors ticket-price)))
+(defn profit [ticket-price] (- (einnahmen ticket-price) (total-costs ticket-price)))
+
+(profit 8)
+(profit 7)
+(profit 6)
+(profit 5)
+
+(rational? 1/2)
