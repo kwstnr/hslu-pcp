@@ -107,3 +107,18 @@
 
 (sum-numbers (range 10))
 (sum-numbers-with-print (range 10))
+
+(for [i [1 2 3]
+      j [1 2 3]
+      :when (< i j)]
+  [i j])
+
+#{[1 2 3] [1 2 3 4] [1 2 3 4 5]}
+(conj #{1 2 3} 3)
+
+(for [a (range 1 101)
+      b (range 1 101)
+      c (range 1 101)
+      :when (== (* c c) (+ (* a a) (* b b)))
+      :when (< a b)]
+  [a b c])
