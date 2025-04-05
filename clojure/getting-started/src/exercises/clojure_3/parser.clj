@@ -1,4 +1,4 @@
-(ns exercises.clojure_3.ex_4.parser
+(ns exercises.clojure_3.parser
   (:require
    [clojure.core :refer [defn-]]
    [clojure.string :as str]

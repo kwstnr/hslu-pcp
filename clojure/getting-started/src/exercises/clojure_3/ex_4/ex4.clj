@@ -1,8 +1,8 @@
 (ns exercises.clojure_3.ex_4.ex4
   (:require
-   [exercises.clojure_3.ex_4.parser :refer [parse]])
+   [exercises.clojure_3.parser :refer [parse]])
   (:import
-   [exercises.clojure_3.ex_4.parser Op Val]))
+   [exercises.clojure_3.parser Op Val]))
 
 ;; a)
 ;;        +
