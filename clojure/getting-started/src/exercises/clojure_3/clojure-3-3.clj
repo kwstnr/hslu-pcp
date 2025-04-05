@@ -1,4 +1,5 @@
-(ns exercises.clojure-3.clojure-3.3)
+#_{:clj-kondo/ignore [:namespace-name-mismatch]}
+(ns exercises.clojure-3.clojure-3-3)
 
 ;; a) 
 ;;  ist nicht funktional -> 

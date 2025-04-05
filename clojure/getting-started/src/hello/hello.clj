@@ -122,3 +122,21 @@
       :when (== (* c c) (+ (* a a) (* b b)))
       :when (< a b)]
   [a b c])
+
+(import [java.awt.event ActionListener])
+(import [javax.swing JFrame JButton])
+(let [button (JButton. "Klick mich!")
+
+ ; Object erzeugen, welches von JFrame erbt
+ ; und ActionListener-Interface implementiert
+      frame (proxy [JFrame ActionListener] ["Mein Fenster"]
+              (actionPerformed [e]
+                (println "Button clicked!")))]
+
+ ; Button mit Listener verbinden
+  (.addActionListener button frame)
+ ; Fenster mit Button anzeigen
+  (doto frame
+    (.setSize 300 200)
+    (.add button)
+    (.setVisible true)))

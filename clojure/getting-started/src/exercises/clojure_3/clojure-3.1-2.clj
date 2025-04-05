@@ -1,3 +1,4 @@
+#_{:clj-kondo/ignore [:namespace-name-mismatch]}
 (ns exercises.clojure-3.clojure-3.1-2)
 
 ; exercise 1
