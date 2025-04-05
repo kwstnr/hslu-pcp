@@ -29,3 +29,16 @@
 
 ;; tests
 (= parsed solution)
+
+;; d)
+(defn eval-expr [expr]
+  (cond
+    (instance? Val expr) (.value expr)
+    (instance? Op expr)
+    (let [left (eval-expr (.left expr))
+          right (eval-expr (.right expr))]
+      (case (.op expr)
+        "+" (+ left right)
+        "-" (- left right)
+        "*" (* left right)
+        "/" (/ left right)))))
