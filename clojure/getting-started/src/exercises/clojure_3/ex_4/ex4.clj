@@ -42,3 +42,23 @@
         "-" (- left right)
         "*" (* left right)
         "/" (/ left right)))))
+
+(eval-expr parsed)
+(eval-expr solution)
+
+;; e)
+(defn compile-expr [expr]
+  (cond
+    (instance? Val expr) [(str "LOAD " (.value expr))]
+    (instance? Op expr)
+    (let [left (compile-expr (.left expr))
+          right (compile-expr (.right expr))
+          op (case (.op expr)
+               "+" ["ADD"]
+               "-" ["SUB"]
+               "*" ["MUL"]
+               "/" ["DIV"])]
+      (concat left right op))))
+
+(count (compile-expr parsed))
+(compile-expr solution)
